@@ -134,7 +134,7 @@ body {
 
 }
 
-#menu-tile, #specials-tile, #map-tile {
+.menu-tile, #specials-tile, #map-tile {
   height: 1000px;
   width: 100%;
   margin-bottom: 15px;
@@ -144,14 +144,14 @@ body {
   border-radius: 10px;
   box-shadow: crimson;
 }
-#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+.menu-tile:hover, #specials-tile:hover, #map-tile:hover {
   box-shadow: 0 1px 5px 1px #cccccc;
 }
-#menu-tile {
+.menu-tile {
   background-position: center;
 }
 
-#menu-tile span, #specials-tile span, #map-tile span {
+.menu-tile span, #specials-tile span, #map-tile span {
   position: absolute;
   top: 0;
   right: 0;
