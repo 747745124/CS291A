@@ -9,7 +9,7 @@ class AboutOpenClasses < Neo::Koan
 
   def test_as_defined_dogs_do_bark
     fido = Dog.new
-    assert_equal __, fido.bark
+    assert_equal "WOOF", fido.bark
   end
 
   # ------------------------------------------------------------------
@@ -19,12 +19,16 @@ class AboutOpenClasses < Neo::Koan
     def wag
       "HAPPY"
     end
+
+    def bark
+      "WOOF"
+    end
   end
 
   def test_after_reopening_dogs_can_both_wag_and_bark
     fido = Dog.new
-    assert_equal __, fido.wag
-    assert_equal __, fido.bark
+    assert_equal "HAPPY", fido.wag
+    assert_equal "WOOF", fido.bark
   end
 
   # ------------------------------------------------------------------
@@ -36,8 +40,8 @@ class AboutOpenClasses < Neo::Koan
   end
 
   def test_even_existing_built_in_classes_can_be_reopened
-    assert_equal __, 1.answer_to_life_universe_and_everything?
-    assert_equal __, 42.answer_to_life_universe_and_everything?
+    assert_equal false, 1.answer_to_life_universe_and_everything?
+    assert_equal true, 42.answer_to_life_universe_and_everything?
   end
 
   # NOTE: To understand why we need the :: before Integer, you need to
